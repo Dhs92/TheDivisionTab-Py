@@ -1,31 +1,15 @@
-# MIT License
-#
-# Copyright (c) 2019 Alex Forehand
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-
 from setuptools import setup
 
 setup(
-    name='thedivisiontab_py',
-    version='0.1',
-    packages=['', 'api', 'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip',
+    name='thedivisiontab-py',
+    version='0.1.1',
+    packages=['', 'venv.Lib.site-packages.idna', 'venv.Lib.site-packages.certifi', 'venv.Lib.site-packages.chardet',
+              'venv.Lib.site-packages.chardet.cli', 'venv.Lib.site-packages.urllib3',
+              'venv.Lib.site-packages.urllib3.util', 'venv.Lib.site-packages.urllib3.contrib',
+              'venv.Lib.site-packages.urllib3.contrib._securetransport', 'venv.Lib.site-packages.urllib3.packages',
+              'venv.Lib.site-packages.urllib3.packages.backports',
+              'venv.Lib.site-packages.urllib3.packages.ssl_match_hostname', 'venv.Lib.site-packages.requests',
+              'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip',
               'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._vendor',
               'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._vendor.idna',
               'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._vendor.pytoml',
@@ -63,9 +47,10 @@ setup(
               'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._internal.utils',
               'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._internal.models',
               'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._internal.commands',
-              'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._internal.operations'],
+              'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._internal.operations', 'thedivisiontab_py'],
     url='https://github.com/Dhs92/thedivisiontab-py',
     license='MIT',
     author='Dhs92',
-    description='A Python wrapper for the TheDivisionTab API'
+    author_email='',
+    description='A Python wrapper for the TDT API'
 )

@@ -21,9 +21,10 @@
 # SOFTWARE.
 
 import urllib.parse
-import urllib.request
 
-import exceptions
+import requests
+
+from . import exceptions
 
 
 # Takes user name and platform as arguments. Options are "uplay", "psn", and "xbl"
@@ -36,8 +37,9 @@ async def get_by_name(name, platform="uplay") -> dict:
     if platform not in ("uplay", "psn", "xbl"):
         raise ValueError(f"Expected uplay, psn, or xbl but got {platform}")
 
-    data = urllib.request.urlopen(f"https://thedivisiontab.com/api/"
-                                  f"search.php?name={name}&platform={platform}")
+    data = requests.get(f"https://thedivisiontab.com/api/search.php?name={name}&platform={platform}")
+    data = data.json()
+
     if data['totalresults'] == 0:
         raise exceptions.NoResultsFound("No results found")
 
@@ -49,8 +51,8 @@ async def get_by_name(name, platform="uplay") -> dict:
 # Request is returned as JSON and stored in a dictionary
 async def get_by_id(user_id) -> dict:
     user_id = urllib.parse.quote(user_id)
-    data = urllib.request.urlopen(f"https://thedivisiontab.com/api/"
-                                  f"search.php?pid={user_id}")
+    data = requests.get(f"https://thedivisiontab.com/api/search.php?pid={user_id}")
+    data = data.json()
 
     if data['totalresults'] == 0:
         raise exceptions.NoResultsFound("No results found")
