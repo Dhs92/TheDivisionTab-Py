@@ -23,9 +23,9 @@
 from setuptools import setup
 
 setup(
-    name='thedivisiontab-py',
+    name='thedivisiontab_py',
     version='0.1',
-    packages=['venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip',
+    packages=['', 'api', 'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip',
               'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._vendor',
               'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._vendor.idna',
               'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._vendor.pytoml',
@@ -64,9 +64,8 @@ setup(
               'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._internal.models',
               'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._internal.commands',
               'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._internal.operations'],
-    url='',
-    license='MIT License',
+    url='https://github.com/Dhs92/thedivisiontab-py',
+    license='MIT',
     author='Dhs92',
-    author_email='',
     description='A Python wrapper for the TheDivisionTab API'
 )
