@@ -25,7 +25,7 @@ from setuptools import setup
 setup(
     name='thedivisiontab-py',
     version='0.1',
-    packages=['', 'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip',
+    packages=['venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip',
               'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._vendor',
               'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._vendor.idna',
               'venv.Lib.site-packages.pip-10.0.1-py3.7.egg.pip._vendor.pytoml',

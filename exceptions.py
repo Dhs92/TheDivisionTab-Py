@@ -1,2 +1,0 @@
-class NoResultsFound(Exception):
-    pass

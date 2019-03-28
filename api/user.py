@@ -38,7 +38,7 @@ async def get_by_name(name, platform="uplay") -> dict:
 
     data = urllib.request.urlopen(f"https://thedivisiontab.com/api/"
                                   f"search.php?name={name}&platform={platform}")
-    if data['totalresults'] is 0:
+    if data['totalresults'] == 0:
         raise exceptions.NoResultsFound("No results found")
 
     return data
@@ -52,7 +52,7 @@ async def get_by_id(user_id) -> dict:
     data = urllib.request.urlopen(f"https://thedivisiontab.com/api/"
                                   f"search.php?pid={user_id}")
 
-    if data['totalresults'] is 0:
+    if data['totalresults'] == 0:
         raise exceptions.NoResultsFound("No results found")
 
     return data
