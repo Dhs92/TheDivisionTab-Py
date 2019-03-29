@@ -24,7 +24,7 @@ import urllib.parse
 
 import requests
 
-from . import exceptions
+import thedivisiontab_py.exceptions as exceptions
 
 
 # Takes user name and platform as arguments. Options are "uplay", "psn", and "xbl"
@@ -43,7 +43,7 @@ async def get_by_name(name, platform="uplay") -> dict:
     if data['totalresults'] == 0:
         raise exceptions.NoResultsFound("No results found")
 
-    return data
+    return data.get("results")[0]
 
 
 # Takes uplay user ID as the only argument
@@ -57,4 +57,4 @@ async def get_by_id(user_id) -> dict:
     if data['totalresults'] == 0:
         raise exceptions.NoResultsFound("No results found")
 
-    return data
+    return data.get("results")[0]
