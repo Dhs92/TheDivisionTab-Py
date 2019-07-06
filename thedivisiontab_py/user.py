@@ -51,7 +51,7 @@ async def get_by_name(name, platform="uplay") -> dict:
 # Request is returned as JSON and stored in a dictionary
 async def get_by_id(user_id) -> dict:
     user_id = urllib.parse.quote(user_id)
-    data = requests.get(f"https://thedivisiontab.com/api/search.php?pid={user_id}")
+    data = requests.get(f"https://thedivisiontab.com/api/player.php?pid={user_id}")
     data = data.json()
 
     if data['totalresults'] == 0:
